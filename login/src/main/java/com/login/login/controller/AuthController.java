@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import com.login.login.entity.User;
 import com.login.login.repository.UserRepository;
 
+import java.util.List;
+
 @Controller
 public class AuthController {
 
@@ -47,4 +49,17 @@ public class AuthController {
         model.addAttribute("error", "Invalid Credentials");
         return "login";
     }
+
+    @GetMapping("/users")
+    public String listUsers(Model model) {
+        // Fetch all users from the database
+        List<User> users = repo.findAll();
+
+        // Add the list to the model so the view can access it
+        model.addAttribute("users", users);
+
+        // Return the view name
+        return "users";
+    }
+
 }
