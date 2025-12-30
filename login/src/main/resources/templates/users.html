@@ -1,27 +1,54 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>User List</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>All Users</h1>-->
+
+<!--<table border="1">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Email</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    &lt;!&ndash; Loop through users &ndash;&gt;-->
+<!--    <tr th:each="user : ${users}">-->
+<!--        <td th:text="${user.id}"></td>-->
+<!--        <td th:text="${user.name}"></td>-->
+<!--        <td th:text="${user.email}"></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>User List</title>
 </head>
 <body>
-<h1>All Users</h1>
+
+<h2>Registered Users</h2>
 
 <table border="1">
-    <thead>
     <tr>
         <th>ID</th>
-        <th>Name</th>
         <th>Email</th>
     </tr>
-    </thead>
-    <tbody>
-    <!-- Loop through users -->
+
     <tr th:each="user : ${users}">
         <td th:text="${user.id}"></td>
-        <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
     </tr>
-    </tbody>
 </table>
+
+<a href="/home">Back to Home</a>
+
 </body>
 </html>
