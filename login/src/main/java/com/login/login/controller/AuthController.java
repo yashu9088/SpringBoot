@@ -55,7 +55,7 @@ public class AuthController {
         String username = principal.getName(); // email
         model.addAttribute("username", username);
 
-        return "home";
+        return "loginSuccess";
     }
 
 

@@ -30,8 +30,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
 
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login", "/signup", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/login", "/signup", "/css/**", "/js/**", "/").permitAll()
                         .requestMatchers("/users").authenticated()
+                        .requestMatchers("/add-keypoint", "/my-keypoints").authenticated()
                         .anyRequest().authenticated()
                 )
 

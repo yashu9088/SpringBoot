@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Keypoint</title>
+</head>
+<body>
+
+<h2>Add Keypoint</h2>
+
+<form method="post" action="/add-keypoint">
+
+    <!-- NAME MUST MATCH @RequestParam("points") -->
+    <input type="text" name="points" required />
+
+    <br><br>
+    <button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>
